@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "745797181921",
+    "firebase_url": "https://asthmanew-a6814.firebaseio.com",
+    "project_id": "asthmanew-a6814",
+    "storage_bucket": "asthmanew-a6814.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745797181921:android:f37c3393901c0f5bb3f2a0",
+        "android_client_info": {
+          "package_name": "com.example.asthmanew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745797181921-0dfkv8cv0q9j3tdbmnodc1qsosma02j3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.asthmanew",
+            "certificate_hash": "6d29494b2971d116ecaaea033a3b669f475034fc"
+          }
+        },
+        {
+          "client_id": "745797181921-m7j1c59r7ccpcooe08qa2ia3nnkvtaia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ2bZo6hZ_zTQdOnVszJIqr-QuPuDuhSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745797181921-m7j1c59r7ccpcooe08qa2ia3nnkvtaia.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
