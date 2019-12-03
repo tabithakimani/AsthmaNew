@@ -24,7 +24,7 @@ public class ReminderActivity extends AppCompatActivity {
     private static final String TAG = "AddToDatabase";
 
     private Button btnSubmit;
-    private EditText inputMed, inputDate,inputDose;
+    private EditText inputMed, inputDate,inputDose,nameR, sexR;
     private String userID;
 
     //add Firebase Database stuff
@@ -41,6 +41,9 @@ public class ReminderActivity extends AppCompatActivity {
         inputDate = (EditText) findViewById(R.id.date1);
         inputDose = (EditText) findViewById(R.id.dose1);
         inputMed = (EditText) findViewById(R.id.medicine1);
+        nameR = (EditText) findViewById(R.id.nameRegistration);
+        sexR = (EditText) findViewById(R.id.sexRegistration);
+
 
         //declare the database reference object. This is what we use to access the database.
         //NOTE: Unless you are signed in, this will not be useable.
@@ -92,21 +95,31 @@ public class ReminderActivity extends AppCompatActivity {
                 String date = inputDate.getText().toString();
                 String dose = inputDose.getText().toString();
                 String medicine = inputMed.getText().toString();
+                String name = nameR.getText().toString();
+                String sex = sexR.getText().toString();
+
+
 
                 Log.d(TAG, "onClick: Attempting to submit to database: \n" +
                         "date: " + date + "\n" +
                         "dose: " + dose + "\n" +
-                        "medicine: " + medicine + "\n"
+                        "medicine: " + medicine +
+                        "name: " + name + "\n" +
+                        "sex: " + sex + "\n" +
+                        "\n"
                 );
 
                 //handle the exception if the EditText fields are null
-                if(!date.equals("") && !medicine.equals("") && !dose.equals("")){
-                    Reminder reminder = new Reminder(date, medicine,dose);
+                if(!date.equals("") && !medicine.equals("") && !dose.equals("") && !sex.equals("") && !name.equals("")){
+                    Reminder reminder = new Reminder(date, medicine,dose,name,sex);
                     myRef.child("users").child(userID).setValue(reminder);
                     toastMessage("New Information has been saved.");
                     inputDate.setText("");
                     inputMed.setText("");
                     inputDose.setText("");
+                    sexR.setText("");
+                    nameR.setText("");
+
                 }else{
                     toastMessage("Fill out all the fields");
                 }

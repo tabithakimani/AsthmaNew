@@ -144,6 +144,27 @@
             android:textSize="14sp"
             app:layout_constraintLeft_toRightOf="@+id/dose"
             app:layout_constraintTop_toBottomOf="@+id/medicine1" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            android:id="@+id/nameRegistration"
+            app:layout_constraintTop_toBottomOf="@+id/dose"
+            android:textColorHint="@android:color/black"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="age"
+            android:id="@+id/ageRegistration"
+            app:layout_constraintTop_toBottomOf="@+id/nameRegistration"
+            android:textColorHint="@android:color/black"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="sex"
+            android:id="@+id/sexRegistration"
+            app:layout_constraintTop_toBottomOf="@+id/ageRegistration"
+            android:textColorHint="@android:color/black"/>
 
         <Button
             android:id="@+id/button2"
@@ -157,7 +178,7 @@
             android:textColor="@android:color/white"
             android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dose"
+            app:layout_constraintTop_toBottomOf="@+id/sexRegistration"
             android:layout_marginLeft="150dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

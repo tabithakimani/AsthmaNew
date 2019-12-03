@@ -18,7 +18,7 @@ public class SplashActivity extends Activity {
             public void run(){
                 try {
                     Thread.sleep(5000);  // change the time according to your needs(its in milliseconds)
-                    Intent i = new Intent(getApplicationContext(),MainActivity.class);     // change the activity you want to load
+                    Intent i = new Intent(getApplicationContext(),SignUpActivity.class);     // change the activity you want to load
                     startActivity(i);
                     finish();
                 } catch (InterruptedException e) {
@@ -26,7 +26,7 @@ public class SplashActivity extends Activity {
                 }
                 finally {
                     finish();
-                    Intent i = new Intent(SplashActivity.this, MainActivity.class);
+                    Intent i = new Intent(SplashActivity.this, SignUpActivity.class);
                     startActivity(i);
                 }
             }

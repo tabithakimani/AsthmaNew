@@ -9,17 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SoundActivity"></activity>
-        <activity android:name=".FirebaseMessagingMain" />
-        <activity
-            android:name=".Profile"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SoundActivity" />
         <activity
             android:name=".ReminderActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".SecondActivity" />
-        <activity
-            android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -28,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
