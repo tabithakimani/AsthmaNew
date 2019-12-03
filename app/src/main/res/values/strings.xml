@@ -90,7 +90,7 @@
 
     <string name="profile_names">Display name</string>
     <string name="induce_smile">Delaroy Studios</string>
-
+    <string name="underlined"><u>Login</u></string>
     <string name="edit_profile_name">Name</string>
     <string name="edit_profile_country">Country</string>
     <string name="edit_profile_phone">Phone number</string>

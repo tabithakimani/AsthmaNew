@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,8 +24,8 @@ public class ReminderActivity extends AppCompatActivity {
 
     private static final String TAG = "AddToDatabase";
 
-    private Button btnSubmit;
-    private EditText inputMed, inputDate,inputDose,nameR, sexR;
+    private Button btnSubmit,btnView;
+    private EditText inputMed, inputDate,inputDose,nameR, sexR, soundInput;
     private String userID;
 
     //add Firebase Database stuff
@@ -38,11 +39,13 @@ public class ReminderActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder);
         btnSubmit = (Button) findViewById(R.id.button2);
+        btnView = findViewById(R.id.button3);
         inputDate = (EditText) findViewById(R.id.date1);
         inputDose = (EditText) findViewById(R.id.dose1);
         inputMed = (EditText) findViewById(R.id.medicine1);
         nameR = (EditText) findViewById(R.id.nameRegistration);
         sexR = (EditText) findViewById(R.id.sexRegistration);
+        soundInput = findViewById(R.id.sound);
 
 
         //declare the database reference object. This is what we use to access the database.
@@ -52,6 +55,15 @@ public class ReminderActivity extends AppCompatActivity {
         myRef = mFirebaseDatabase.getReference();
         FirebaseUser user = mAuth.getCurrentUser();
         userID = user.getUid();
+
+
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReminderActivity.this, ViewData.class);
+                startActivity(intent);
+            }
+        });
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -97,6 +109,7 @@ public class ReminderActivity extends AppCompatActivity {
                 String medicine = inputMed.getText().toString();
                 String name = nameR.getText().toString();
                 String sex = sexR.getText().toString();
+                String sound_level = soundInput.getText().toString();
 
 
 
@@ -110,8 +123,8 @@ public class ReminderActivity extends AppCompatActivity {
                 );
 
                 //handle the exception if the EditText fields are null
-                if(!date.equals("") && !medicine.equals("") && !dose.equals("") && !sex.equals("") && !name.equals("")){
-                    Reminder reminder = new Reminder(date, medicine,dose,name,sex);
+                if(!date.equals("") && !medicine.equals("") && !dose.equals("") && !sex.equals("") && !name.equals("") && !sound_level.equals("")){
+                    Reminder reminder = new Reminder(date, medicine,dose,name,sex,sound_level);
                     myRef.child("users").child(userID).setValue(reminder);
                     toastMessage("New Information has been saved.");
                     inputDate.setText("");

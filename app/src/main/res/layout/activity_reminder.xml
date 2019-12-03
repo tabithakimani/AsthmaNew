@@ -32,139 +32,121 @@
             app:srcCompat="@drawable/app_asthma_small"
             android:layout_marginLeft="150dp" />
 
-        <ImageView
-            android:id="@+id/date2"
-            android:layout_width="59dp"
-            android:layout_height="64dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="28dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logo"
-            app:srcCompat="@drawable/date" />
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="100dp"
-            android:layout_height="76dp"
-            android:layout_marginLeft="32dp"
-            android:layout_marginTop="21dp"
-            android:gravity="center|start"
-            android:text="Date"
 
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@+id/date2"
-            app:layout_constraintTop_toBottomOf="@id/logo" />
 
         <EditText
             android:id="@+id/date1"
-            android:layout_width="165dp"
-            android:layout_height="72dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginLeft="18dp"
             android:layout_marginTop="28dp"
             android:ems="10"
             android:hint="Date"
             android:inputType="textPersonName|number"
             android:textSize="14sp"
-            app:layout_constraintLeft_toRightOf="@+id/date"
+            android:textColorHint="@color/colorAccent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logo" />
 
         <!--date-->
         <!--medicine-->
 
-        <ImageView
-            android:id="@+id/medicine2"
-            android:layout_width="56dp"
-            android:layout_height="57dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="41dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/date2"
-            app:srcCompat="@drawable/inhaler" />
 
-        <TextView
-            android:id="@+id/medicine"
-            android:layout_width="98dp"
-            android:layout_height="54dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="37dp"
-            android:gravity="center|start"
-            android:text="Medicine"
-            android:textSize="14sp"
 
-            android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@+id/medicine2"
-            app:layout_constraintTop_toBottomOf="@+id/date" />
 
         <EditText
             android:id="@+id/medicine1"
-            android:layout_width="171dp"
-            android:layout_height="53dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginLeft="21dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="Medicine"
             android:textSize="14sp"
             android:inputType="text"
-            app:layout_constraintLeft_toRightOf="@+id/medicine"
+            android:textColorHint="@color/colorAccent"
+            app:layout_constraintLeft_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/date1" />
         <!--        medicine-->
-        <ImageView
-            android:id="@+id/dose2"
-            android:layout_width="54dp"
-            android:layout_height="66dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="41dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/medicine2"
-            app:srcCompat="@drawable/dose" />
 
-        <TextView
-            android:id="@+id/dose"
-            android:layout_width="93dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="37dp"
-            android:gravity="center|start"
-            android:text="Dose"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            app:layout_constraintLeft_toRightOf="@+id/dose2"
-            app:layout_constraintTop_toBottomOf="@+id/medicine" />
+
 
         <EditText
             android:id="@+id/dose1"
-            android:layout_width="171dp"
-            android:layout_height="68dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_marginLeft="21dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="10dp"
             android:ems="10"
             android:hint="Dose"
+            android:textColorHint="@color/colorAccent"
             android:inputType="text"
             android:textSize="14sp"
-            app:layout_constraintLeft_toRightOf="@+id/dose"
+            app:layout_constraintLeft_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/medicine1" />
+
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="name"
             android:id="@+id/nameRegistration"
-            app:layout_constraintTop_toBottomOf="@+id/dose"
-            android:textColorHint="@android:color/black"/>
-        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="age"
+            android:layout_height="50dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:textColorHint="@color/colorAccent"
+            android:hint="Name"
+            android:inputType="textPersonName|number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dose1" />
+
+
+        <EditText
             android:id="@+id/ageRegistration"
-            app:layout_constraintTop_toBottomOf="@+id/nameRegistration"
-            android:textColorHint="@android:color/black"/>
-        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="sex"
+            android:layout_height="50dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Age"
+            android:textColorHint="@color/colorAccent"
+            android:inputType="textPersonName|number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameRegistration" />
+
+
+        <EditText
             android:id="@+id/sexRegistration"
-            app:layout_constraintTop_toBottomOf="@+id/ageRegistration"
-            android:textColorHint="@android:color/black"/>
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Sex"
+            android:textColorHint="@color/colorAccent"
+            android:inputType="textPersonName|number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ageRegistration" />
+
+
+
+        <EditText
+            android:id="@+id/sound"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Sound"
+            android:textColorHint="@color/colorAccent"
+            android:inputType="textPersonName|number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sexRegistration" />
+
 
         <Button
             android:id="@+id/button2"
@@ -172,13 +154,27 @@
             android:layout_height="40dp"
             android:layout_marginRight="40dp"
             android:layout_marginStart="160dp"
-            android:layout_marginTop="30dp"
-            android:background="@color/colorPrimaryDark"
+            android:layout_marginTop="70dp"
+            android:background="@android:color/transparent"
             android:text="Send"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorAccent"
             android:textSize="14sp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sexRegistration"
+            android:layout_marginLeft="150dp" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/transparent"
+            android:text="View Profile"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
             android:layout_marginLeft="150dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

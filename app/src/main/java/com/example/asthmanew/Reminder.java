@@ -8,16 +8,26 @@ public class Reminder {
     public String medicine;
     public String dose;
     public String name;
+    public String sound_level;
 
     public String sex;
 
-    public Reminder(String date, String medicine, String dose, String name,  String sex) {
+
+    public String getSound_level() {
+        return sound_level;
+    }
+
+    public void setSound_level(String sound_level) {
+        this.sound_level = sound_level;
+    }
+
+    public Reminder(String date, String medicine, String dose, String name, String sex, String sound_level) {
         this.date = date;
         this.medicine = medicine;
         this.dose = dose;
         this.name = name;
-
         this.sex = sex;
+        this.sound_level = sound_level;
     }
 
     public Reminder() {
